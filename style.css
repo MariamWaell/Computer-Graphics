@@ -1,0 +1,126 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  padding: 10px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #e3f2fd;
+}
+
+.logo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+.cont-logo {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 6px;
+}
+
+#canvas {
+  padding: 5px 5px;
+  width: 450px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  /* border: rgb(31, 31, 87) solid 3px; */
+  background: #ffffff;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+input:hover {
+  background-color: #fff;
+  border: 3px rgb(98, 139, 179) solid;
+  color: #123c69;
+}
+
+p {
+  padding-top: 5px;
+}
+
+.container {
+  width: 850px;
+  padding: 30px 35px 35px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.container.disable .controls .reset-filter,
+.container.disable .controls .save-img {
+  opacity: 0.7;
+  pointer-events: none;
+}
+.container h2 {
+  margin-top: 5px;
+  padding-left: 40px;
+  font-size: 22px;
+  font-weight: 1000;
+  color: #123c69;
+}
+.container .wrapper {
+  display: flex;
+  margin: 20px 0;
+  min-height: 335px;
+}
+.wrapper .editor-panel {
+  padding: 15px 20px;
+  width: 280px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.editor-panel .title {
+  display: block;
+  /* margin-bottom: 14px; */
+  color: #000;
+  padding-left: 25px;
+  /* padding-top: -50px; */
+  font-size: 22px;
+  /* font-weight: bold; */
+  font-weight: 500;
+}
+.editor-panel .options,
+.controls {
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.wrapper .preview-img {
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+  margin-left: 20px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    padding: 25px;
+  }
+  .container .wrapper {
+    flex-wrap: wrap-reverse;
+  }
+  .wrapper .editor-panel {
+    width: 100%;
+  }
+  .wrapper .preview-img {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}

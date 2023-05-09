@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Shape Editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container disable">
+      <img class="logo" src="./img/intersect.png" alt="" />
+      <h2>Shape Editor</h2>
+      <div class="wrapper">
+        <div class="editor-panel">
+          <div class="filter">
+            <img class="cont-logo" src="./img/move-arrows.png" alt="" />
+            <label class="title">Controls</label>
+            <form>
+              <div class="options">
+                <p>Transition in x</p>
+                <input
+                  type="number"
+                  id="x_trans"
+                  class="form-input-number"
+                  min="-150"
+                  max="150"
+                  value="0"
+                  step="10"
+                />
+                <!-- <p id="trans_x_err" style="color:red;"></p> -->
+
+                <p>Transition in y</p>
+                <input
+                  type="number"
+                  id="y_trans"
+                  class="form-input-number"
+                  min="-150"
+                  max="100"
+                  value="0"
+                  step="10"
+                />
+                <!-- <p id="trans_y_err" style="color:red;"></p> -->
+
+                <p>Rotation Degree</p>
+                <input
+                  type="number"
+                  id="rot_degree"
+                  class="form-input-number"
+                  min="-360"
+                  max="360"
+                  value="0"
+                  step="10"
+                />
+                <!-- <p id="rotate" style="color:red;"></p> -->
+
+                <p>Scaling Factor</p>
+                <input
+                  type="number"
+                  id="scaling_factor"
+                  class="form-input-number"
+                  min="0.1"
+                  max="3"
+                  value="1"
+                  step="0.1"
+                />
+                <!-- <p id="scale_factor_err" style="color:red;"></p> -->
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="preview-img">
+          <canvas id="canvas" width="500" height="500"> </canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+  <script src="UI_controls.js"></script>
+</html>
